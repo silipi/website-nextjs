@@ -1,0 +1,13 @@
+.main {
+  margin-left: 8rem;
+  margin-right: 3rem;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    margin: 0;
+    margin-bottom: 6rem;
+    padding: 1rem;
+  }
+}

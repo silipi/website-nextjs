@@ -1,0 +1,24 @@
+.container {
+  margin-top: 4rem;
+  color: #23232e;
+  margin-bottom: 8rem;
+}
+.hello {
+  font-size: 7rem;
+}
+.title {
+  font-size: 2rem;
+}
+.description {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  color: #565656;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    text-align: center;
+    margin: 0;
+    margin-top: 3rem;
+  }
+}
