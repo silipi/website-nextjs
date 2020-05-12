@@ -16,9 +16,52 @@ export function GitButton() {
 }
 
 export function ProjectDetailsCard(props) {
+
   return (
     <div className={styles.cardPanel}>
-      <div className={styles.cardImage}>Placeholder</div>
+      <div className={styles.cardImage}><img src={`./images/projects-page/${props.imagem}`} /></div>
+      <button onClick={props.showModal}>Open</button>
+    </div>
+  )
+}
+
+export function Modal({ handleClose, show, children }) {
+
+  const showHideClassName = show ? 'modaldb' : 'modaldn';
+
+  return (
+    <div className={showHideClassName}>
+      <div className={styles.modalMain}>
+        {children}
+        <button
+          onClick={handleClose}
+        >
+          Close
+        </button>
+      </div>
+
+      <style jsx>{`
+      .modaldb {
+        position: fixed;
+        z-index: 997;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: block;
+      }
+      .modaldn {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+      }
+      `}</style>
+
     </div>
   )
 }

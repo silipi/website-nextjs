@@ -77,6 +77,7 @@
   background-color: teal;
   margin-bottom: 3rem;
 }
+
 .cardImage {
   background-color: springgreen;
   display: flex;
@@ -84,4 +85,15 @@
   height: 225px;
   align-items: center;
   justify-content: center;
+}
+
+.modalMain {
+  position: fixed;
+  z-index: 998;
+  background: white;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
