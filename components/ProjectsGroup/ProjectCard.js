@@ -7,7 +7,7 @@ export default function ProjectCard(props) {
 
     <Link href={`/projects/${props.nameURL}`}>
       <div className={styles.cardContainer}>
-        <img src={props.image ? `./images/projects/${props.image}` : `./images/projects/card-placeholder.png`} className={styles.cardImage} />
+        <img src={props.image ? `./images/projects/${props.image}` : `./images/placeholder/card-placeholder.png`} className={styles.cardImage} />
         <div className={styles.cardDetails}>
           <h3 className={styles.cardTitle}>{props.title ? props.title : "Título do projeto"}</h3>
           <p className={styles.cardDescription}>

@@ -2,31 +2,15 @@ import React, { Component } from 'react'
 import styles from './ProjectLayout.module.css'
 import Link from 'next/link'
 
-import { Badges, GitButton, ProjectDetailsCard, Modal } from './Utils'
+import { Badges, GitButton, ProjectDetailsCard } from './Utils'
 
 class ProjectLayout extends Component {
-  state = { show: false }
-
-
-
-  showModal = () => {
-    this.setState({ show: true });
-  };
-
-  hideModal = () => {
-    this.setState({ show: false });
-  };
-
-
+  images = this.props.cardImage
+  texts = this.props.cardText
 
   render() {
-    console.log(this.badge)
     return (
       <div className={styles.container}>
-
-        <Modal show={this.state.show} handleClose={this.hideModal}>
-
-        </Modal>
 
         <div className={styles.lateralLeft}>
           <Link href="/">
@@ -43,17 +27,17 @@ class ProjectLayout extends Component {
 
           <div className={styles.usedTech}>
             <h2>Tecnologias usadas:</h2>
-            {this.props.badge.map(badge => {
-              return <Badges name={badge} />
-            })}
+            {
+              //Os badges vem por props, passam pelo map que gera um componente pra cada badge passado
+              this.props.badges.map(badge => <Badges name={badge} />)
+            }
           </div>
         </div>
 
         <div className={styles.lateralRight}>
-          <ProjectDetailsCard />
-          <ProjectDetailsCard />
-          <ProjectDetailsCard />
-          <ProjectDetailsCard />
+          {this.props.cardImage.map((i, id) =>
+            <ProjectDetailsCard image={i} text={this.texts[id]} />
+          )}
         </div>
 
       </div>

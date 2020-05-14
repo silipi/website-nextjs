@@ -5,6 +5,8 @@
 }
 .hello {
   font-size: 7rem;
+  color: #6c5ce7;
+  display: inline-block;
 }
 .title {
   font-size: 2rem;
