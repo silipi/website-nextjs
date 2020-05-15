@@ -14,12 +14,9 @@ export default function ProjectsGroup() {
             image='imgname.png' (inside ./public/images/projects/'imgname.png')
             description=string
         */}
-        <ProjectCard nameURL="my-blog" />
-        <ProjectCard nameURL="vuejs" />
-        <ProjectCard nameURL="react" />
-        <ProjectCard nameURL="node.js" />
-        <ProjectCard nameURL="teste" />
-        <ProjectCard nameURL="amoogabriel" />
+        <ProjectCard nameURL="my-blog" title="Gatsby Blog" image="my-blog.png" description="Um blog criado como projeto de um curso realizado pela Udemy." />
+        <ProjectCard />
+        <ProjectCard />
       </div>
     </div>
   )

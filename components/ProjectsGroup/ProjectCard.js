@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function ProjectCard(props) {
   return (
 
-    <Link href={`/projects/${props.nameURL}`}>
+    <Link href={props.nameURL ? `/projects/${props.nameURL}` : "/"}>
       <div className={styles.cardContainer}>
         <img src={props.image ? `./images/projects/${props.image}` : `./images/placeholder/card-placeholder.png`} className={styles.cardImage} />
         <div className={styles.cardDetails}>

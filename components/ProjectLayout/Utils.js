@@ -6,7 +6,7 @@ export function Badges(props) {
   )
 }
 
-export function GitButton() {
+export function GitButton(props) {
   return (
     <div className={styles.gitButton} onClick={() => (window.location.href = `https://www.github.com/silipi/${props.repoURL}`)}>
       <span>Github Repo</span>

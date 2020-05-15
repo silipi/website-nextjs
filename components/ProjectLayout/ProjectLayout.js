@@ -7,6 +7,7 @@ import { Badges, GitButton, ProjectDetailsCard } from './Utils'
 class ProjectLayout extends Component {
   images = this.props.cardImage
   texts = this.props.cardText
+  id = 0;
 
   render() {
     return (
@@ -21,7 +22,7 @@ class ProjectLayout extends Component {
 
           <h1 className={styles.title}>{this.props.title}</h1>
 
-          <GitButton />
+          <GitButton repoURL={this.props.repoURL} />
 
           <p>{this.props.description}</p>
 
@@ -35,8 +36,9 @@ class ProjectLayout extends Component {
         </div>
 
         <div className={styles.lateralRight}>
-          {this.props.cardImage.map((i, id) =>
-            <ProjectDetailsCard image={i} text={this.texts[id]} />
+          {this.props.cardImage.map((i, index) => {
+            return <ProjectDetailsCard image={i} text={this.texts[index]} />
+          }
           )}
         </div>
 
