@@ -4,9 +4,10 @@ import ProjectsGroup from '../components/ProjectsGroup/ProjectsGroup'
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Banner />
       <ProjectsGroup />
-    </Layout>
+    </>
+
   )
 }
