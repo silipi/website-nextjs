@@ -27,6 +27,7 @@
   overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.225);
   transition: all ease 250ms;
+  z-index: 2;
 }
 
 .cardContainer:hover {
