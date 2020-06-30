@@ -15,7 +15,7 @@ export default function ProjectsGroup() {
             description=string
         */}
         <ProjectCard nameURL="my-blog" title="Gatsby Blog" image="my-blog.png" description="Um blog criado como projeto de um curso realizado pela Udemy." />
-        <ProjectCard />
+        <ProjectCard nameURL='github-finder' title='Github Finder' image="github-finder.png" description='Um aplicativo para encontrar usuários do Github.'/>
         <ProjectCard />
       </div>
     </div>
